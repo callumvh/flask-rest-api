@@ -6,3 +6,4 @@ templates
 venv
 jotter.py
 test.db
+__pycache__
