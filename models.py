@@ -30,3 +30,8 @@ class User(db.Model):
         row = User.query.filter_by(username=name).first()
         db.session.delete(row)
         db.session.commit()
+
+    @staticmethod
+    def get_row_by_id():
+        all_data = User.query.order_by(User.id).all()
+        return all_data

@@ -15,3 +15,6 @@ api.add_resource(resources.Post, '/post')
 api.add_resource(resources.Get, '/get/<string:response>')
 api.add_resource(resources.Put, '/put')
 api.add_resource(resources.Delete, '/delete')
+
+api.add_resource(resources.Users, '/users')
+api.add_resource(resources.Users_goto, '/users/<int:id>')
