@@ -15,6 +15,3 @@ api.add_resource(resources.Post, '/post')
 api.add_resource(resources.Get, '/get/<string:response>')
 api.add_resource(resources.Put, '/put')
 api.add_resource(resources.Delete, '/delete')
-
-# if __name__ == '__main__':
-#     app.run()

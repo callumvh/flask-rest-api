@@ -1,9 +1,8 @@
-__pychache__
+"__pychache__"
 .idea
 .vscode
 static
 templates
 venv
 jotter.py
-__pychache__
 test.db
