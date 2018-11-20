@@ -1,16 +1,21 @@
 # pylint: disable=E1101
-from run import db
+from app import db
 
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(80), unique=True, nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
+    password = db.Column(db.String(120), unique=True, nullable=False)
 
     @staticmethod
     def add_to_db(response):
         db.session.add(
-            User(username=response['username'], email=response['email']))
+            User(
+                username=response['username'],
+                email=response['email'],
+                password=response['password'],
+            ))
         db.session.commit()
 
     @staticmethod

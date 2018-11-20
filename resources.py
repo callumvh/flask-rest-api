@@ -13,12 +13,14 @@ class Post(Resource):
 
         parser.add_argument('username')
         parser.add_argument('email')
+        parser.add_argument('password')
         response = parser.parse_args()
         try:
             User.add_to_db(response)
             return {
                 'username': response['username'],
-                'email': response['email']
+                'email': response['email'],
+                'password': response['password'],
             }, 200
         except Exception as exception_message:
             return {
